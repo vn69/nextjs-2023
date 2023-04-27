@@ -15,7 +15,7 @@ const AppMenu = () => {
         {
             label: 'Demo',
             items: [
-                // { label: 'Redux', icon: 'pi pi-fw pi-home', to: '/demo/redux' },
+                { label: 'Redux', icon: 'pi pi-fw pi-home', to: '/demo/redux' },
                 { label: 'Todo List', icon: 'pi pi-fw pi-home', to: '/demo/todolist' },
                 { label: 'Todo List Components', icon: 'pi pi-fw pi-home', to: '/demo/todolistcomponents' },
             ],

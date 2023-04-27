@@ -7,16 +7,23 @@ import 'primeicons/primeicons.css';
 import '../styles/layout/layout.scss';
 import '../styles/demo/Demos.scss';
 
+import { Provider } from "react-redux";
+import store from "../stores";
+
 export default function MyApp({ Component, pageProps }) {
     if (Component.getLayout) {
-        return <LayoutProvider>{Component.getLayout(<Component {...pageProps} />)}</LayoutProvider>;
+        return <Provider store={store}>
+            <LayoutProvider>{Component.getLayout(<Component {...pageProps} />)}</LayoutProvider>;
+        </Provider>
     } else {
         return (
-            <LayoutProvider>
-                <Layout>
-                    <Component {...pageProps} />
-                </Layout>
-            </LayoutProvider>
+            <Provider store={store}>
+                <LayoutProvider>
+                    <Layout>
+                        <Component {...pageProps} />
+                    </Layout>
+                </LayoutProvider>
+            </Provider>
         );
     }
 }
