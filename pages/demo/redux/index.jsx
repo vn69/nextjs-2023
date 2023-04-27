@@ -18,7 +18,7 @@ const ReduxCPN = () => {
           <div className="flex align-items-center">
             <div>{counter.count}</div>
             <Button
-              className="ml-2"
+              className="mx-2"
               icon="pi pi-plus"
               rounded
               text
@@ -27,7 +27,7 @@ const ReduxCPN = () => {
               onClick={() => dispatcher(counterAction.increment())}
             />
             <Button
-              className="ml-2"
+              className="mx-2"
               rounded
               text
               severity="success"
